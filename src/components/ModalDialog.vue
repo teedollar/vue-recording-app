@@ -14,7 +14,7 @@
                         <div class="col-12 mt-2">
                             <form class="form">
                                 <div class="form-group">
-                                    <select name="" id="" class="custom-select p-3 select">
+                                    <select name="" id="" class="custom-select p-2 select">
                                         <option value="">
                                             Select a project
                                         </option>
@@ -23,12 +23,12 @@
                             </form>
                         </div>
 
-                        <div class="col-12 mt-5 actions">
+                        <div class="col-12 mt-4 actions">
                             <div class="row">
-                                <div class="col text-left">
+                                <div class="col-9 text-left">
                                     <span class="text-heading">Record Screen</span>
                                 </div>
-                                <div class="col float-right">
+                                <div class="col float-right new-col">
                                     <div class="form-check form-switch float-right text-right justify-content-end">
                                         <input class="form-check-input switch" v-model="screen" type="checkbox" id="flexSwitchCheckChecked" checked>
                                     </div>
@@ -37,10 +37,10 @@
                         </div>
                         <div class="col-12 mt-2 actions">
                             <div class="row">
-                                <div class="col text-left">
+                                <div class="col-9 text-left">
                                     <span class="text-heading">Record Camera</span>
                                 </div>
-                                <div class="col float-right">
+                                <div class="col float-right new-col">
                                     <div class="form-check form-switch float-right text-right justify-content-end">
                                         <input class="form-check-input switch" v-model="camera" type="checkbox" id="flexSwitchCheckChecked" checked>
                                     </div>
@@ -49,10 +49,10 @@
                         </div>
                         <div class="col-12 mt-2 actions">
                             <div class="row">
-                                <div class="col text-left">
+                                <div class="col-9 text-left">
                                     <span class="text-heading">Record Mic</span>
                                 </div>
-                                <div class="col float-right">
+                                <div class="col float-right new-col" >
                                     <div class="form-check form-switch float-right text-right justify-content-end">
                                         <input class="form-check-input switch" v-model="mic" type="checkbox" id="flexSwitchCheckChecked">
                                     </div>
@@ -61,7 +61,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 mt-5 text-center">
+                        <div class="col-12 mt-4 text-center">
                             <span class="mt-2 ra recording-bg cursor-pointer ms-3" @click="this.$emit('startRecording')">
                                 Start Recording
                             </span>
@@ -104,11 +104,12 @@ export default {
 }
 
 .card {
-    width: 26rem;
-    height: 59%;
-    margin-top: 240px;
+    width: 27%;
+    height: 64%;
+    margin-top: 200px;
     margin-right: 130px;
     border-radius: 12px;
+    margin-left: 150px
 }
 
 .card-header {
@@ -139,6 +140,7 @@ export default {
     letter-spacing: 0px;
     color: #000000;
     opacity: 1;
+
 }
 
 form select {
@@ -176,6 +178,7 @@ form select {
     border: 1px solid #E2E5ED;
     border-radius: 28px;
     padding: 9px 45px;
+    font-size: 11px;
 }
 
 .form-check-input:checked, .form-check-input::before {
@@ -194,15 +197,21 @@ form select {
 
 .text-heading {
     text-align: left;
-    font: normal normal medium 18px/27px Poppins;
+    font-family: Poppins;
     letter-spacing: 0px;
     color: #21455E;
     opacity: 0.7;
     font-weight: bold;
+    font-size: 11px;
 }
 
 .cursor-pointer {
     cursor: pointer
+}
+
+.new-col {
+    margin-top: -19px;
+    margin-left: 60px
 }
 
 </style>

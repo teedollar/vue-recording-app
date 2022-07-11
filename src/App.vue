@@ -1,7 +1,7 @@
 <template>
 <!-- Navbar -->
 <div class="main">
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand logo-font text-dark ms-5 ps-2" href="#" id="brand">
                 <img src="./assets/swarm.png"  alt="">
@@ -12,7 +12,7 @@
                 <i class="fa fa-bars"></i>
             </button>
 
-            <div class="collapse navbar-collapse links ms-5 ps-5" id="links">
+            <div class="collapse navbar-collapse links ms-0 ps-5" id="links">
                 <ul class="navbar-nav mr-auto first-ul">
                     <li class="nav-item">
                         <a class="nav-link" href="#">Projects</a>
@@ -43,7 +43,7 @@
                 </ul>
             </div>
             <div class="collapse navbar-collapse account align-middle">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto mt-2">
                     <li class="nav-item me-2"><a class="nav-link help" href="#">Help</a></li>
                     <li class="nav-item me-2"><a class="nav-link" href="#">|</a></li>
                     <!-- <li class="nav-item">
@@ -93,8 +93,8 @@
 
             <!-- Main body -->
                 <div class="col-12 col-lg-9 main-body">
-                    <div class="container mx-5">
-                        <div class="row mt-4">
+                    <div class="container mx-4">
+                        <div class="row mt-1">
                             <div class="col-12 title">
                                 <p><span class="me-2">Snapbyte</span> <span class="me-2">></span> <span>My Recordings</span></p>
                             </div>
@@ -159,13 +159,14 @@
                                                     {{rec.title}}
                                                 </div>
                                                 <div class="col heading-small mt-2">
-                                                    The Video description is shown here <br> if the user has added it.
+                                                    <!-- The Video description is shown here <br> if the user has added it. -->
+                                                    {{rec.text}}
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>324</td>
-                                        <td>923 KB</td>
-                                        <td>3 months ago</td>
+                                        <td><span class="views">{{rec.views}}</span></td>
+                                        <td>{{rec.size}}</td>
+                                        <td>{{rec.modified}}</td>
                                         <td><i class="fa-solid fa-ellipsis"></i></td>
                                     </tr>
                                 </tbody>
@@ -243,16 +244,16 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap');
 
-
 .navbar {
     color: red;
     border-bottom: 1px solid #EDF0F0;
+
 }
 
 .navbar ul li a{
     color: #707070;
     font-family: poppins;
-    font-size: 18px;
+    font-size: 13px;
 }
 .navbar .navbar-collapse ul li a:active, .navbar .navbar-collapse ul li a:hover{
         border-top:  5px solid #0DABD8;
@@ -270,7 +271,7 @@ export default {
 }
 
 .navbar ul.first-ul li {
-    padding-right: 20px;
+    padding-right: 13px;
 
 
 }
@@ -284,7 +285,7 @@ export default {
 }
 
 .navbar .links .first-ul {
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 .account li a.help {
@@ -331,7 +332,7 @@ export default {
 }
 
 .sidebar {
-    width: 306px;
+    width: 260px;
     height: 1147px;
     background: #EBF2F6 0% 0% no-repeat padding-box;
     opacity: 0.4;
@@ -347,13 +348,15 @@ export default {
     border-radius: 10px;
     opacity: 99999;
     padding: 10px 0;
+
 }
 
 .recording span, .share span {
-    font: normal normal 300 16px/25px Poppins;
+    font: normal normal 300 14px/20px Poppins;
     letter-spacing: 0px;
     color: #081118;
-    font-weight: bolder
+    font-weight: bolder;
+    font-size: 14px;
 }
 
 .fa-share-nodes {
@@ -369,7 +372,8 @@ export default {
 /*  Main body  */
 
 .main-body {
-    margin-left: 40px;
+    margin-left: 17px;
+    max-width: 100%;
 }
 .main-body .title p {
     text-align: left;
@@ -402,6 +406,7 @@ export default {
     border: 1px solid #E2E5ED;
     border-radius: 28px;
     padding: 8px 30px;
+    font-size: 10px;
 }
 
 .main-body .recording-actions .camera-bg {
@@ -416,7 +421,7 @@ export default {
 
 .table {
     border-collapse: separate;
-    border-spacing: 0 15px;
+    border-spacing: 0 3px;
 }
 
 .table-section .table th {
