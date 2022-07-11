@@ -82,7 +82,7 @@
                         </div>
 
                         <div class="col-12">
-                            <div class="share text-left mt-4 text-left">
+                            <div class="share text-left mt-4 text-left" style="margin-left: 50px">
                                 <i class="fas fa-share-alt text-left"></i>
                                 <span class="ps-3 text-left">Requested</span>
                             </div>
