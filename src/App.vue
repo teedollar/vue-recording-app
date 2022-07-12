@@ -151,7 +151,7 @@
                                 <tbody  class="mt-5 pt-5">
                                     <tr class="mt-4 tr-margin-top" v-for="rec in recordings" :key="recordings.id">
                                         <td>
-                                            <img :src="`/src/assets/${rec.video}`" alt="Hello">
+                                            <img :src="`public/${rec.video}`" :alt="rec.video" />
                                         </td>
                                         <td>
                                             <div class="headings">
@@ -236,7 +236,10 @@ export default {
         navigator.mediaDevices.getUserMedia({audio: this.mic, video: this.camera, })
         //
         this.startToRecord = true
-        }
+    },
+    getImage(img){
+        //return require(`@/assets/{img}`);
+    }
   }
 };
 </script>
