@@ -188,7 +188,7 @@
             <div class="screen col-12">
 
             </div>
-            <div class="col-12 mt-4 mx-auto justify-content-center">
+            <div class="col-12 mt-3 mx-auto justify-content-center">
                 <div class="text-center">
                     <span class="start-recording  mx-auto text-center">
                     Start recording
@@ -474,11 +474,11 @@ export default {
 /*  Sreen display  */
 
 .main .video-recording {
-    margin: 37px auto 10px auto;
+    margin: 25px auto 10px auto;
 }
 .main .video-recording .icon {
     color: #EE5951;
-    margin-left: 120px;
+    margin-left: 145px;
 }
 
 .main .video-recording .preview {
@@ -489,8 +489,8 @@ export default {
 }
 .main .video-recording .screen {
     margin: 6px auto 10px auto;
-    width: 1030px;
-    height: 490px;
+    width: 800px;
+    height: 360px;
     background: #21455E 0% 0% no-repeat padding-box;
     border-radius: 8px;
     opacity: 1;
@@ -502,11 +502,12 @@ export default {
     letter-spacing: 0px;
     opacity: 1;
     border: 1px solid #E2E5ED;
-    padding: 12px 36px;
+    padding: 8px 36px;
     color: #ffffff;
     background: #0DABD8 0% 0% no-repeat padding-box;
     border-radius: 32px;
-    opacity: 0.3;
+    opacity: 0.4;
+    font-size: 11px;
 }
 
 
