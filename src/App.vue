@@ -151,7 +151,7 @@
                                 <tbody  class="mt-5 pt-5">
                                     <tr class="mt-4 tr-margin-top" v-for="rec in recordings" :key="recordings.id">
                                         <td>
-                                            <img :src="`public/${rec.video}`" :alt="rec.video" />
+                                            <img :src="`/${rec.video}`" :alt="rec.video" />
                                         </td>
                                         <td>
                                             <div class="headings">
